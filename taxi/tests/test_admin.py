@@ -14,7 +14,7 @@ class AdminSiteTests(TestCase):
         self.driver = get_user_model().objects.create_user(
             username="driver",
             password="testdriver",
-            license_number="ACD"
+            license_number="'ABC12345"
         )
 
     def test_driver_license_number_listed(self):

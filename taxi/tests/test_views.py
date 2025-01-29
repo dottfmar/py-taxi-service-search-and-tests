@@ -166,7 +166,7 @@ class PrivateDriverTest(TestCase):
             Driver.objects.create(
                 username=f"driver{i}",
                 password=f"testdriverpass{i}",
-                license_number=f"ABC{i}"
+                license_number=f"ABC{i}2345"
             )
 
     def test_retrieve_driver(self):
@@ -213,6 +213,6 @@ class PrivateDriverTest(TestCase):
         )
         self.assertEqual(
             response.context["driver_list"][0].license_number,
-            "ABC1"
+            "ABC12345"
 
         )
